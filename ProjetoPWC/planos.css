@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background: url("image/planosbackground.jpg") no-repeat center center/cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("image/planosbackground.jpg") no-repeat center center/cover;
+
+    filter: blur(4px);
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* Container dos cartões */
+.conteudoplanos {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cartão */
+.cartao {
+    border-radius: 15px;
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Efeito hover */
+.cartao:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do cartão */
+.titulocartao h2 {
+    color: #555;
+    font-size: 30px;
+}
+
+.titulocartao h1 {
+    font-size: 50px;
+    color: #FF6633;
+    margin: 10px 0;
+}
+
+/* Conteúdo */
+.cartaoconteudo ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.cartaoconteudo li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 20px;
+}
+
+/* Último item sem linha */
+.cartaoconteudo li:last-child {
+    border-bottom: none;
+}
+
+/* Destaque opcional (Premium) */
+.cartao:nth-child(3) {
+    border: 2px solid #FF6633;
+    transform: scale(1.05);
+}
+
+/* Hover ainda mais forte no premium */
+.cartao:nth-child(3):hover {
+    transform: scale(1.08);
+}
+
+.cartaofooter {
+    margin-top: 20px;
+}
+
+/* Botão */
+.cartaofooter button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #FF6633;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+.cartaofooter button:hover {
+    background: #e0552b;
+    transform: scale(1.05);
+}
+
+/* Clique */
+.cartaofooter button:active {
+    transform: scale(0.98);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .conteudoplanos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+footer {
+    background: #050505;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 24px;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #ff5b24;
+    margin-top: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.footer-column a:hover {
+    opacity: 0.75;
+}
+
+.footer-bottom {
+    background: #111111;
+    padding: 14px 24px 22px;
+    text-align: center;
+    color: #bbbbbb;
+    font-size: 0.9rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #ff5b24;
+    padding: 10px 20px;
+    gap: 12px;
+}
+
+.navbar-logo img {
+    width: 200px;;
+    height: 100px;
+}
+
+.navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+    opacity: 0.85;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Ginásio</title>
+    <link rel="stylesheet" href="contactos.css">
+    <link rel="shortcut icon" href="image/content.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="home.html"><img src="image/content.png" alt="Logo do Ginásio" /></a>
+            </div>
+            <div class="navbar-links">
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="tabela.html">Nossos PTs</a>
+                <a href="contactos.html">Contactos</a>
+                <a href="planos.html">Planos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="map-section">
+            <div class="contact-card map-card">
+                <h2>Onde nos encontrar</h2>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps?q=41.1664998,-8.5936741&z=16&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-card contact-info-card">
+                <h1>Fala connosco</h1>
+
+                <div class="contact-item">
+                    <span>Telefone</span>
+                    <p>915 167 301</p>
+                    <small>Chamada para rede móvel nacional</small>
+                </div>
+
+                <div class="contact-item">
+                    <span>Email</span>
+                    <p>geral@ginasio.pt</p>
+                </div>
+
+                <div class="contact-item">
+                    <span>Morada</span>
+                    <p>R. Tapada Silva, Porto</p>
+                </div>
+
+                <div class="contact-item">
+                    <span>Horário</span>
+                    <p>De segunda-feira a sexta-feira: das 06:30 às 23:00</p>
+                    <p>Sábado: das 09:00 às 20:00</p>
+                    <p>Domingo e feriados: das 09:00 às 13:00</p>
+                </div>
+
+                <p class="contact-note">Entraremos em contacto o mais breve possível.</p>
+            </div>
+
+            <div class="contact-card contact-form-card">
+                <h2>Envie-nos uma mensagem</h2>
+                <form action="#" method="post">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem..." rows="5" required></textarea>
+                    </div>
+                    <div class="checkbox-field">
+                        <label>
+                            <input type="checkbox" name="contato-equipa">
+                            Quero ser contactado pela equipa Ginásio para receber mais informações sobre os serviços.
+                        </label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Ginasios</h3>
+                <ul>
+                    <li><a href="#">Porto</a></li>
+                    <li><a href="#">Istec</a></li>
+                    <li><a href="#">Santa Maria da Feira</a></li>
+                    <li><a href="#">Fiães</a></li>
+                    <li><a href="#">Lobão</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sobre nós</h3>
+                <ul>
+                    <li><a href="#">Mensalidades Clubes</a></li>
+                    <li><a href="#">Aulas de Grupo</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook GinasioPorto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ginásio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="contactos.js"></script>
+</body>
+</html>
